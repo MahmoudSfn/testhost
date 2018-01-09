@@ -1,0 +1,49 @@
+<html>
+<body>
+
+<?php
+/*if(isset($_POST['Val1'])) 
+	$mes = $_POST(['Val1']);
+else 
+	$mes = */
+?>
+<form method="POST">
+<h3>Ecrire une Phrase</h3>
+<textarea name=Val1 ><?php //echo $mes; ?></textarea><input type=submit value="Envoyer" name="btn">
+<?php
+if(isset($_POST['btn']))
+{
+$Val = strtoupper(trim($_POST['Val1']));	
+$TAB1 = explode(' ',$Val);
+$c1 = count($TAB1);
+echo "<p>Le Nombre de mots est ".$c1;
+echo "</p>";
+echo "<table><tr>";
+echo "<td>Caractere</td>";
+
+$TAB2=count_chars($Val,1);
+foreach ($TAB2 as $c => $occ)
+{
+	echo "<td>".(chr($c))."</td>";
+}
+echo "</tr>";
+echo "<tr>";
+echo "<td>Nbr OC</td>";
+foreach ($TAB2 as $c => $occ)
+{
+	echo "<td>".($occ)."</td>";
+}
+echo "</tr>";
+
+	
+}
+
+
+
+?>
+
+
+
+</form>
+</body>
+</html>
