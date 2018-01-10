@@ -1,0 +1,10 @@
+body {
+    background-color: black;
+}
+
+#canvas{
+    border:3px solid red;
+    background-color: black;
+    border-radius:0%;
+    background:linear-gradient(blue,lightblue,white,white,green);
+}
